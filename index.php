@@ -23,13 +23,24 @@
           }
     }
 
-    $myFavoriteMovie = new Movie('Good Will Hunting', 'Psychological drama', 'Matt Damon');
-    $mySecondFavoriteMovie = new Movie('The Shawshank Redemption', 'Drama', 'Tim Robbins');
+    // $myFavoriteMovie = new Movie('Good Will Hunting', 'Psychological drama', 'Matt Damon');
+    // $mySecondFavoriteMovie = new Movie('The Shawshank Redemption', 'Drama', 'Tim Robbins');
 
+    $movies = [
+        new Movie('Good Will Hunting', 'Psychological drama', 'Matt Damon'),
+        new Movie('The Shawshank Redemption', 'Drama', 'Tim Robbins')
+    ];
+    
+    var_dump($movies)
 ?>
 
-<h1>My favourite movie:</h1>
+<h1>My favourite movies:</h1>
+<?php foreach ($movies as $movie){; ?>
 
-<p>Title: <?= $myFavoriteMovie -> get_title(); ?></p>
-<p>Genre: <?= $myFavoriteMovie -> get_genre(); ?></p>
-<p>Main actor: <?= $myFavoriteMovie -> mainActor; ?></p>
+    <p>Title: <?= $movie -> get_title(); ?></p>
+    <p>Genre: <?= $movie -> get_genre(); ?></p>
+    <p>Main actor: <?= $movie -> mainActor; ?></p>
+
+    ---
+
+<?php }; ?>
