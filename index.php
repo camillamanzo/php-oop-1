@@ -9,6 +9,15 @@
         public $releaseDate;
         public $originalLanguage;
 
+        /**
+         * @param string $title 
+         * @param string $genre 
+         * @param string $mainActor 
+         * @param string $plot 
+         * @param string $releaseDate 
+         * @param string $originalLanguage 
+        **/
+
         // construct function that gets properties upon initialization of the object
         function __construct($_title, $_genre, $_mainActor){
             $this -> title = $_title;
